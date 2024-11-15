@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "1f382bf6-3f54-43bb-9d14-b03170091e66",
+		"name": "coursework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20333064"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/tickets",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Concert Ticket\",\r\n  \"price\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tickets"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:5000/api/tickets \\\r\n-H \"Content-Type: application/json\" \\\r\n-d '{\r\n  \"name\": \"Concert Ticket\",\r\n  \"price\": 50\r\n}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/tickets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tickets"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET http://localhost:5000/api/tickets -H \"Content-Type: application/json\"\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/tickets/purchase/<ticket_id>",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/tickets/purchase/<ticket_id>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tickets",
+						"purchase",
+						"<ticket_id>"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:5000/api/tickets/purchase/<ticket_id> \\\r\n-H \"Content-Type: application/json\"\r\n"
+			},
+			"response": []
+		}
+	]
+}

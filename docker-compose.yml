@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./ticketing-backend
+    container_name: ticketing-backend
+    ports:
+      - "5000:5000" # Map container port 5000 to host port 5000
+    environment:
+      NODE_ENV: production
+    networks:
+      - ticketing-network
+
+  frontend:
+    build:
+      context: ./ticketing-frontend
+      dockerfile: Dockerfile
+    container_name: ticketing-frontend
+    ports:
+      - "4200:80" # Map container port 80 (nginx) to host port 4200
+    networks:
+      - ticketing-network
+
+networks:
+  ticketing-network:
+    driver: bridge
